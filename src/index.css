@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #58CC02;
+  --color-primary-dark: #46a302;
+  --color-primary-light: #89E219;
+  --color-secondary: #1CB0F6;
+  --color-secondary-dark: #1899D6;
+  --color-accent-orange: #FF9600;
+  --color-accent-red: #FF4B4B;
+  --color-accent-purple: #CE82FF;
+  --color-accent-pink: #FF86D0;
+  --color-bg: #131F24;
+  --color-bg-card: #1A2D35;
+  --color-bg-elevated: #233A44;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A0B4BC;
+  --color-text-muted: #5C7A85;
+  --color-border: #2A4350;
+  --color-xp-bar: #FFD900;
+  --color-streak: #FF9600;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-bg text-text-primary font-sans antialiased m-0;
+  }
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(88, 204, 2, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(88, 204, 2, 0.6); }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+.animate-glow {
+  animation: glow-pulse 2s infinite;
+}
