@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell } from 
 import { TrendingUp, Calendar, CheckCircle2, Zap, Award } from 'lucide-react';
 import { useUserStore } from '../stores/userStore';
 import { useTaskStore } from '../stores/taskStore';
-import { format, subDays, parseISO } from 'date-fns';
+import { format, subDays } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { todayStr } from '../utils/helpers';
 
